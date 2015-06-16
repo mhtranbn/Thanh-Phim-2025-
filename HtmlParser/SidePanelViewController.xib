@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SidePanelViewController" customModule="Tha_nh_Phim" customModuleProvider="target">
+            <connections>
+                <outlet property="tableView" destination="UtC-XL-XNs" id="Rgk-gf-SJ7"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="screen.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="1h7-01-eg3">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="185"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="185" id="BfC-lQ-TsK"/>
+                    </constraints>
+                </imageView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="UtC-XL-XNs">
+                    <rect key="frame" x="0.0" y="172" width="375" height="495"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="495" id="DnK-Sb-uqm"/>
+                    </constraints>
+                    <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="ZN1-Wa-ZUD"/>
+                        <outlet property="delegate" destination="-1" id="yeK-aB-nj2"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="UtC-XL-XNs" secondAttribute="bottom" id="1Nw-W4-aQF"/>
+                <constraint firstItem="1h7-01-eg3" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="HKG-gN-8jD"/>
+                <constraint firstItem="UtC-XL-XNs" firstAttribute="trailing" secondItem="1h7-01-eg3" secondAttribute="trailing" id="HXg-pu-5KZ"/>
+                <constraint firstItem="1h7-01-eg3" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="JyS-iq-IEy"/>
+                <constraint firstAttribute="trailing" secondItem="1h7-01-eg3" secondAttribute="trailing" id="KrL-MY-Oel"/>
+                <constraint firstItem="UtC-XL-XNs" firstAttribute="leading" secondItem="1h7-01-eg3" secondAttribute="leading" id="bPo-rZ-Svt"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="screen.jpg" width="2038" height="1210"/>
+    </resources>
+</document>

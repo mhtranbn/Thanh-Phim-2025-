@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<array>
+		<string>http://mmovie.hdviet.com/hdviet-de-cu.x74.p</string>
+		<string>http://mmovie.hdviet.com/hot-trong-thang.x37.p</string>
+		<string>http://mmovie.hdviet.com/hai.x6.p</string>
+		<string>http://mmovie.hdviet.com/hanh-dong.x1.p</string>
+		<string>http://mmovie.hdviet.com/au-my.x30.p</string>
+		<string>http://mmovie.hdviet.com/hoat-hinh.x11.p</string>
+		<string>http://mmovie.hdviet.com/vien-tuong.x10.p</string>
+		<string>http://mmovie.hdviet.com/toi-pham.x38.p</string>
+		<string>http://mmovie.hdviet.com/kinh-di.x15.p</string>
+	</array>
+	<array>
+		<string>Phim đề cử</string>
+		<string>Phim hot trong tháng</string>
+		<string>Phim hài</string>
+		<string>Phim hành động</string>
+		<string>Phim âu mỹ </string>
+		<string>Phim hoạt hình</string>
+		<string>Phim viễn tưởng</string>
+		<string>Phim tội phạm </string>
+		<string>Phim kinh dị</string>
+	</array>
+</array>
+</plist>
