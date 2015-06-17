@@ -56,14 +56,13 @@
 		7CCC7FAE1ABE00300047F69D /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CCC7FAD1ABE00300047F69D /* menu.png */; };
 		7CCC7FB51ABE02B90047F69D /* MovieType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCC7FB41ABE02B90047F69D /* MovieType.swift */; };
 		7CCC7FC01ABE05FF0047F69D /* SidePanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCC7FBE1ABE05FF0047F69D /* SidePanelViewController.swift */; };
-		7CCC7FC11ABE05FF0047F69D /* SidePanelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CCC7FBF1ABE05FF0047F69D /* SidePanelViewController.xib */; };
 		7CCC7FC81ABE0A000047F69D /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCC7FC61ABE0A000047F69D /* ContainerViewController.swift */; };
 		7CCC7FCC1ABE108C0047F69D /* MovieTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCC7FCA1ABE108C0047F69D /* MovieTypeCell.swift */; };
 		7CCC7FCD1ABE108C0047F69D /* MovieTypeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CCC7FCB1ABE108C0047F69D /* MovieTypeCell.xib */; };
 		7CCC7FD21ABE13530047F69D /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7CCC7FD11ABE13530047F69D /* data.plist */; };
-		7CCC7FD61ABE1C220047F69D /* screen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7CCC7FD51ABE1C220047F69D /* screen.jpg */; };
 		7CCC7FD81ABE1DD30047F69D /* MovieSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCC7FD71ABE1DD30047F69D /* MovieSingleton.swift */; };
 		7CCC7FE51ABE2FBE0047F69D /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CCC7FE41ABE2FBE0047F69D /* NSString+MD5.m */; };
+		D6D924D81B314DC2006B305F /* screen.png in Resources */ = {isa = PBXBuildFile; fileRef = D6D924D71B314DC2006B305F /* screen.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -152,15 +151,14 @@
 		7CCC7FAD1ABE00300047F69D /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
 		7CCC7FB41ABE02B90047F69D /* MovieType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieType.swift; sourceTree = "<group>"; };
 		7CCC7FBE1ABE05FF0047F69D /* SidePanelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SidePanelViewController.swift; sourceTree = "<group>"; };
-		7CCC7FBF1ABE05FF0047F69D /* SidePanelViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SidePanelViewController.xib; sourceTree = "<group>"; };
 		7CCC7FC61ABE0A000047F69D /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		7CCC7FCA1ABE108C0047F69D /* MovieTypeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieTypeCell.swift; sourceTree = "<group>"; };
 		7CCC7FCB1ABE108C0047F69D /* MovieTypeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MovieTypeCell.xib; sourceTree = "<group>"; };
 		7CCC7FD11ABE13530047F69D /* data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = data.plist; sourceTree = "<group>"; };
-		7CCC7FD51ABE1C220047F69D /* screen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = screen.jpg; sourceTree = "<group>"; };
 		7CCC7FD71ABE1DD30047F69D /* MovieSingleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieSingleton.swift; sourceTree = "<group>"; };
 		7CCC7FE31ABE2FBE0047F69D /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
 		7CCC7FE41ABE2FBE0047F69D /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
+		D6D924D71B314DC2006B305F /* screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screen.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -282,10 +280,10 @@
 		7C110A941ABE913200D4B151 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				D6D924D71B314DC2006B305F /* screen.png */,
 				7C110A901ABE912E00D4B151 /* WatchMovieViewController.swift */,
 				7C110A911ABE912E00D4B151 /* WatchMovieViewController.xib */,
 				7CCBD1E91ABDC0F000D87857 /* movie.jpg */,
-				7CCC7FD51ABE1C220047F69D /* screen.jpg */,
 				7C6AAA4A1ABEAE4800E40B75 /* back.png */,
 				7C110A8C1ABE8F6300D4B151 /* seach.png */,
 				7CCC7FAD1ABE00300047F69D /* menu.png */,
@@ -357,7 +355,6 @@
 			isa = PBXGroup;
 			children = (
 				7CCC7FBE1ABE05FF0047F69D /* SidePanelViewController.swift */,
-				7CCC7FBF1ABE05FF0047F69D /* SidePanelViewController.xib */,
 				7CCC7FC61ABE0A000047F69D /* ContainerViewController.swift */,
 			);
 			name = SlideMenu;
@@ -474,16 +471,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C110A931ABE912E00D4B151 /* WatchMovieViewController.xib in Resources */,
-				7CCC7FC11ABE05FF0047F69D /* SidePanelViewController.xib in Resources */,
 				7CCBD1EA1ABDC0F000D87857 /* movie.jpg in Resources */,
 				7CCC7FAE1ABE00300047F69D /* menu.png in Resources */,
 				7CCBD1E61ABDB7E300D87857 /* MovieCell.xib in Resources */,
 				6A0126AA1A8AFA33000FB249 /* Main.storyboard in Resources */,
 				7CCC7FCD1ABE108C0047F69D /* MovieTypeCell.xib in Resources */,
 				7C110A8D1ABE8F6300D4B151 /* seach.png in Resources */,
+				D6D924D81B314DC2006B305F /* screen.png in Resources */,
 				32D30F881AEA0392006E921A /* StartApp.bundle in Resources */,
 				7C6AAA4B1ABEAE4800E40B75 /* back.png in Resources */,
-				7CCC7FD61ABE1C220047F69D /* screen.jpg in Resources */,
 				7CCC7FD21ABE13530047F69D /* data.plist in Resources */,
 				6A0126AC1A8AFA33000FB249 /* Images.xcassets in Resources */,
 				328A4CDF1AE8D37E00DA58A9 /* HelveticaNeue.dfont in Resources */,

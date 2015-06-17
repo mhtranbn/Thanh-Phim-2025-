@@ -118,6 +118,45 @@ class ContainerViewController: UIViewController, CenterViewControllerDelegate, U
         sidePanelController.delegate = centerViewController
         
         view.insertSubview(sidePanelController.view, atIndex: 0)
+        view.addConstraint(NSLayoutConstraint(
+            item: sidePanelController.view,
+            attribute: NSLayoutAttribute.Leading,
+            relatedBy: NSLayoutRelation.Equal,
+            toItem: view,
+            attribute: NSLayoutAttribute.Leading,
+            multiplier: 1,
+            constant: 0)
+            )
+        
+        view.addConstraint(NSLayoutConstraint(
+            item: sidePanelController.view,
+            attribute: NSLayoutAttribute.Top,
+            relatedBy: NSLayoutRelation.Equal,
+            toItem: view,
+            attribute: NSLayoutAttribute.Top,
+            multiplier: 1,
+            constant: 0)
+        )
+        
+        view.addConstraint(NSLayoutConstraint(
+            item: sidePanelController.view,
+            attribute: NSLayoutAttribute.Bottom,
+            relatedBy: NSLayoutRelation.Equal,
+            toItem: view,
+            attribute: NSLayoutAttribute.Bottom,
+            multiplier: 1,
+            constant: 0)
+        )
+        
+        sidePanelController.view.addConstraint(NSLayoutConstraint(
+            item: sidePanelController.view,
+            attribute: NSLayoutAttribute.Width,
+            relatedBy: NSLayoutRelation.Equal,
+            toItem: nil,
+            attribute: NSLayoutAttribute.NotAnAttribute,
+            multiplier: 1,
+            constant: 250)
+        )
         
         addChildViewController(sidePanelController)
         sidePanelController.didMoveToParentViewController(self)
@@ -127,7 +166,7 @@ class ContainerViewController: UIViewController, CenterViewControllerDelegate, U
         if (shouldExpand) {
             currentState = .LeftPanelExpanded
             
-            animateCenterPanelXPosition(targetPosition: CGRectGetWidth(centerNavigationController.view.frame) - centerPanelExpandedOffset)
+            animateCenterPanelXPosition(targetPosition: 250)
         } else {
             animateCenterPanelXPosition(targetPosition: 0) { finished in
                 self.currentState = .BothCollapsed

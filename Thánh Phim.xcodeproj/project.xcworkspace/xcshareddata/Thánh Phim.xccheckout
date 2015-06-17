@@ -10,6 +10,8 @@
 	<string>Thánh Phim</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>2903E3874DC0912AFD247599E96877FF2EAC69EB</key>
+		<string>bitbucket.org:mhtran/thanh-phim-2025.git</string>
 		<key>409700BD5A1C8A4C274CCB407B8016601FFC2932</key>
 		<string>https://github.com/mhtranbn/th-nhphim.git</string>
 	</dict>
@@ -17,15 +19,17 @@
 	<string>Thánh Phim.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>409700BD5A1C8A4C274CCB407B8016601FFC2932</key>
+		<key>2903E3874DC0912AFD247599E96877FF2EAC69EB</key>
 		<string>../..</string>
+		<key>409700BD5A1C8A4C274CCB407B8016601FFC2932</key>
+		<string>../../../th-nhphim</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/mhtranbn/th-nhphim.git</string>
+	<string>bitbucket.org:mhtran/thanh-phim-2025.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>409700BD5A1C8A4C274CCB407B8016601FFC2932</string>
+	<string>2903E3874DC0912AFD247599E96877FF2EAC69EB</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
@@ -35,6 +39,14 @@
 			<string>409700BD5A1C8A4C274CCB407B8016601FFC2932</string>
 			<key>IDESourceControlWCCName</key>
 			<string>th-nhphim</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>2903E3874DC0912AFD247599E96877FF2EAC69EB</string>
+			<key>IDESourceControlWCCName</key>
+			<string>thanh-phim-2025</string>
 		</dict>
 	</array>
 </dict>

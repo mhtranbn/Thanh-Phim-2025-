@@ -17,7 +17,7 @@ class SidePanelViewController: UIViewController, UITableViewDataSource, UITableV
  
     
     @IBOutlet weak var tableView: UITableView!
-    var imageScr:UIImageView!
+    @IBOutlet weak var imageScr: UIImageView!
     var dem:Int = 0
     var startAppAdLoadShow: STAStartAppAd?
 
@@ -29,28 +29,10 @@ class SidePanelViewController: UIViewController, UITableViewDataSource, UITableV
         }
     }
     
-    override func loadView() {
-        super.loadView()
-        
-
-        imageScr = UIImageView(image: UIImage(named: "screen.jpg"))
-        self.view.addSubview(imageScr)
-//        imageScr.image = UIImage(named: "screen.jpg")
-        self.view.backgroundColor = UIColor.whiteColor()
-        self.edgesForExtendedLayout = UIRectEdge.None
-        
-    }
-
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         startAppAdLoadShow = STAStartAppAd()
         imageScr.setTranslatesAutoresizingMaskIntoConstraints(false)
-        let views = ["view": self.view, "image": imageScr]
-        //image cao 200 cach bottom 0
-        self.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-0.0-[image(200)]", options: NSLayoutFormatOptions.allZeros, metrics: nil, views: views))
-        // image cach leff,right 0
-        self.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|-0.0-[image]-30-|", options: NSLayoutFormatOptions.allZeros, metrics: nil, views: views))
 
         var dataFile : NSString = NSBundle.mainBundle().pathForResource("data", ofType: "plist")!
         _data =  NSArray(contentsOfFile: dataFile as String)
@@ -61,9 +43,10 @@ class SidePanelViewController: UIViewController, UITableViewDataSource, UITableV
 
         tableView.reloadData()
 
+        self.view.backgroundColor = UIColor.whiteColor()
+        self.edgesForExtendedLayout = UIRectEdge.None
         
-
-        
+        imageScr.image = UIImage(named: "screen.png");
     }
     
 
