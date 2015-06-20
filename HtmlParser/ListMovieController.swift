@@ -122,7 +122,7 @@ class ListMovieController: UIViewController,NSURLSessionDelegate, UICollectionVi
                     } else {
                         url = NSURL(string: "\(self.movieSingleton.currentMovieType)\(self.currentPage).html")
                         self.qdwdw.text = NSString(UTF8String: "") as? String
-                        self.flagSearch = false
+//                        self.flagSearch = false
                     }
                     
     
@@ -277,7 +277,7 @@ class ListMovieController: UIViewController,NSURLSessionDelegate, UICollectionVi
             movieSingleton.currentMovieType = movieTypeTG
             NSLog(")))))))))(\(movieTypeTG))")
             self.isSearch = true
-            currentPage = 1
+//            currentPage = 1
             movieList.removeAll(keepCapacity: true)
             getDataHTML()
             searchBar.resignFirstResponder()
@@ -343,13 +343,14 @@ class ListMovieController: UIViewController,NSURLSessionDelegate, UICollectionVi
         self.isLoading = false
         self.indicator?.stopAnimating()
         self.isSearch = false
+        self.flagSearch = false
         delegate?.toggleLeftPanel!()
         
         
     }
     
     func movieTypeSelected(movieType : MovieType){
-        self.isSearch = false
+        
         currentPage = 1
         movieSingleton.currentMovieType = movieType.type_url
         movieTypeTG = movieType.type_url
@@ -358,10 +359,13 @@ class ListMovieController: UIViewController,NSURLSessionDelegate, UICollectionVi
         getDataHTML()
         self.navigationItem.title = movieType.name
         delegate?.collapseSidePanels?()
+        self.isSearch = false
+        self.flagSearch = false
     }
     
     func searchBarSearchButtonClicked(searchBar: UISearchBar){
         self.isSearch = true
+        self.flagSearch = false
         currentPage = 1
         movieList.removeAll(keepCapacity: true)
         getDataHTML()
