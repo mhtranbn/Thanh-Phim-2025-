@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>E171371E-E5D9-4B11-AA31-8C488044EF08</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Thánh Phim</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>2903E3874DC0912AFD247599E96877FF2EAC69EB</key>
+		<string>bitbucket.org:mhtran/thanh-phim-2025.git</string>
+		<key>409700BD5A1C8A4C274CCB407B8016601FFC2932</key>
+		<string>https://github.com/mhtranbn/th-nhphim.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Thánh Phim.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>2903E3874DC0912AFD247599E96877FF2EAC69EB</key>
+		<string>../..</string>
+		<key>409700BD5A1C8A4C274CCB407B8016601FFC2932</key>
+		<string>../../../th-nhphim</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>bitbucket.org:mhtran/thanh-phim-2025.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>2903E3874DC0912AFD247599E96877FF2EAC69EB</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>409700BD5A1C8A4C274CCB407B8016601FFC2932</string>
+			<key>IDESourceControlWCCName</key>
+			<string>th-nhphim</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>2903E3874DC0912AFD247599E96877FF2EAC69EB</string>
+			<key>IDESourceControlWCCName</key>
+			<string>thanh-phim-2025</string>
+		</dict>
+	</array>
+</dict>
+</plist>

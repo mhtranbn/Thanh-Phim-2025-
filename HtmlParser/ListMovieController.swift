@@ -35,7 +35,10 @@ class ListMovieController: UIViewController,NSURLSessionDelegate, UICollectionVi
     var isSearch = false
     var canClickMovie :Bool?
     var dem:Int = 0
-
+    var flagSearch:Bool = false
+    var userNSdefault:NSUserDefaults = NSUserDefaults.standardUserDefaults()
+    var movieTypeTG: String = "http://mmovie.hdviet.com/hoat-hinh.x11.p"
+    
     @IBOutlet weak var searchBar: UISearchBar!
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -47,6 +50,7 @@ class ListMovieController: UIViewController,NSURLSessionDelegate, UICollectionVi
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         UIApplication.sharedApplication().statusBarHidden = true
 
         startAppAdLoadShow = STAStartAppAd()
@@ -78,7 +82,7 @@ class ListMovieController: UIViewController,NSURLSessionDelegate, UICollectionVi
     func getDataHTML() {
         self.canClickMovie = false
         dem += 1
-        if (dem == 6) {
+        if (dem == 10) {
             dem = 0
             loadAd()
         }
@@ -112,8 +116,15 @@ class ListMovieController: UIViewController,NSURLSessionDelegate, UICollectionVi
                     url = NSURL(string: "\(self.movieSingleton.currentMovieType)\(self.currentPage).html")
                     self.qdwdw.text = NSString(UTF8String: "") as? String
                 }else {
-                    timkiem += self.searchBar.text + "&&page=\(self.currentPage)"
-                    url = NSURL(string: timkiem.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!)
+                    if (self.flagSearch == false) {
+                        timkiem += self.searchBar.text + "&&page=\(self.currentPage)"
+                        url = NSURL(string: timkiem.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!)
+                    } else {
+                        url = NSURL(string: "\(self.movieSingleton.currentMovieType)\(self.currentPage).html")
+                        self.qdwdw.text = NSString(UTF8String: "") as? String
+                        self.flagSearch = false
+                    }
+                    
     
                 }
                 if (url == nil) {
@@ -249,13 +260,31 @@ class ListMovieController: UIViewController,NSURLSessionDelegate, UICollectionVi
         self.collectionView.delegate = self
     }
     
-    func searchBarCancelButtonClicked(searchBar: UISearchBar) {
-        NSLog("The default search bar cancel button was tapped.")
-        initMovieGrid()
-        
-        searchBar.resignFirstResponder()
-    }
+//    func searchBarCancelButtonClicked(searchBar: UISearchBar) {
+//        NSLog("The default search bar cancel button was tapped.")
+//        initMovieGrid()
+//        
+//        searchBar.resignFirstResponder()
+//    }
     
+    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+//        NSLog("=========\(searchText)")
+//        self.collectionView.dataSource = self
+//        self.collectionView.delegate = self
+//        self.collectionView.reloadData()
+        if (searchText == "") {
+            flagSearch = true
+            movieSingleton.currentMovieType = movieTypeTG
+            NSLog(")))))))))(\(movieTypeTG))")
+            self.isSearch = true
+            currentPage = 1
+            movieList.removeAll(keepCapacity: true)
+            getDataHTML()
+            searchBar.resignFirstResponder()
+        }
+        
+        
+    }
     
     func computeColWidth(numberColum : Int) -> Float {
         return Float((Float(self.view.bounds.width)  - Float(2*SPACE) ))/3.0
@@ -291,7 +320,7 @@ class ListMovieController: UIViewController,NSURLSessionDelegate, UICollectionVi
         if (canClickMovie == true) {
             dem += 1
 
-            if (dem == 6) {
+            if (dem == 10) {
                 dem = 0
                 loadAd()
             }
@@ -323,6 +352,8 @@ class ListMovieController: UIViewController,NSURLSessionDelegate, UICollectionVi
         self.isSearch = false
         currentPage = 1
         movieSingleton.currentMovieType = movieType.type_url
+        movieTypeTG = movieType.type_url
+        NSLog(")rrrrrrrrrr(\(movieTypeTG))")
         movieList.removeAll(keepCapacity: true)
         getDataHTML()
         self.navigationItem.title = movieType.name

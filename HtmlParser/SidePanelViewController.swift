@@ -66,7 +66,7 @@ class SidePanelViewController: UIViewController, UITableViewDataSource, UITableV
 
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         dem += 1
-        if (dem == 5) {
+        if (dem == 10) {
             dem = 0
             loadAd()
         }
