@@ -77,7 +77,7 @@ class SidePanelViewController: UIViewController, UITableViewDataSource, UITableV
     
     func loadAd() {
         
-      startAppAdLoadShow!.loadAd(STAAdType_Automatic, withDelegate: self)
+      startAppAdLoadShow!.loadAdWithDelegate(self)
     }
     
     func didLoadAd(ad: STAAbstractAd) {

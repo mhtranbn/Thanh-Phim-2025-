@@ -92,7 +92,7 @@ class ListMovieController: UIViewController,NSURLSessionDelegate, UICollectionVi
         AFNetworkReachabilityManager.sharedManager().setReachabilityStatusChangeBlock { (status:AFNetworkReachabilityStatus) -> Void in
             switch status.hashValue{
             case AFNetworkReachabilityStatus.NotReachable.hashValue:
-                NSLog("Not reachable")
+//                NSLog("Not reachable")
                 self.qdwdw.text = NSString(UTF8String: "") as? String
                 self.qdwdw.text = NSString(UTF8String: "Hãy kết nối lại wifi or cellular networks.") as? String
                                         self.qdwdw.textAlignment = NSTextAlignment.Center
@@ -228,7 +228,7 @@ class ListMovieController: UIViewController,NSURLSessionDelegate, UICollectionVi
                 }
 
             default:
-                NSLog("Unknown status")
+//                NSLog("Unknown status")
                 self.indicator.stopAnimating()
             }}
 
@@ -275,7 +275,7 @@ class ListMovieController: UIViewController,NSURLSessionDelegate, UICollectionVi
         if (searchText == "") {
             flagSearch = true
             movieSingleton.currentMovieType = movieTypeTG
-            NSLog(")))))))))(\(movieTypeTG))")
+//            NSLog(")))))))))(\(movieTypeTG))")
             self.isSearch = true
 //            currentPage = 1
             movieList.removeAll(keepCapacity: true)
@@ -354,7 +354,7 @@ class ListMovieController: UIViewController,NSURLSessionDelegate, UICollectionVi
         currentPage = 1
         movieSingleton.currentMovieType = movieType.type_url
         movieTypeTG = movieType.type_url
-        NSLog(")rrrrrrrrrr(\(movieTypeTG))")
+//        NSLog(")rrrrrrrrrr(\(movieTypeTG))")
         movieList.removeAll(keepCapacity: true)
         getDataHTML()
         self.navigationItem.title = movieType.name
@@ -494,7 +494,8 @@ class ListMovieController: UIViewController,NSURLSessionDelegate, UICollectionVi
     func loadAd() {
         
         // Set some preferences
-        startAppAdLoadShow!.loadAd(STAAdType_Automatic, withDelegate: self)
+        startAppAdLoadShow!.loadAdWithDelegate(self)
+        startAppAdLoadShow!.loadRewardedVideoAdWithDelegate(self)
     }
     
     func didLoadAd(ad: STAAbstractAd) {
